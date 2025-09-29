@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_forward" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_backward" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="image/logo.png" alt="Trello Logo">
+            </div>
+            <span id="menu-toggle" class="material-symbols-outlined" style="cursor:pointer;">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#1f1f1f">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </span>
+            <span id="menu-close" class="material-symbols-outlined" style="cursor:pointer; display:none;">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#1f1f1f">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </span>
+            <div class="nav-link">
+                <ul>
+                    <li>Features</li>
+                    <li>Solutions</li>
+                    <li>Plans</li>
+                    <li>Pricing</li>
+                    <li>Resources</li>
+                </ul>
+                <button class="btn-1" onclick="window.location.href='form.html'">Log In</button>
+                <button class="btn-2" onclick="window.location.href='form.html'">Get Trello for free</button>
+
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="section-1">
+            <div class="content">
+                <h2>Capture, organize, and tackle your to-dos from anywhere.</h2>
+                <p>Escape the clutter and chaos—unleash your productivity with Trello.</p>
+                <div class="input-row">
+                    <input type="text" id="email-signup" placeholder="Email">
+                    <button>Sign up - it's free!</button>
+                </div>
+                <p>By entering my email, I acknowledge the <span>Atlassian Privacy Policy</span> </p>
+            </div>
+            <div class="section-1-image">
+                <img src="image/section-1 image.png" alt="email on phone">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-2">
+        <div class="content-2">
+            <h6>Trello 101</h6>
+            <h2>Your productivity powerhouse</h2>
+            <p>Stay organized and efficient with Inbox, Boards, and Planner. Every to-do, idea, or responsibility—no
+                matter how small—finds its place, keeping you at the top of your game.</p>
+        </div>
+    </section>
+
+    <section class="section-3">
+        <div class="content-3">
+            <div class="inbox-content" onclick="showSlide(0)">
+                <h2>Inbox</h2>
+                <p>When it’s on your mind, it goes in your Inbox.
+                    Capture your to-dos from anywhere, anytime.
+                </p>
+            </div>
+
+            <div class="boards-content" onclick="showSlide(1)">
+                <h2>Boards</h2>
+                <p>Your to-do list may be long,
+                    but it can be manageable!
+                    Keep tabs on everything from "to-dos to tackle" to
+                    "mission accomplished!”
+                </p>
+            </div>
+
+            <div class="planner-content" onclick="showSlide(2)">
+                <h2>Planner</h2>
+                <p>Drag, drop, get it done.
+                    Snap your top tasks into your calendar and make time for what truly matters.
+                </p>
+            </div>
+        </div>
+        <div class="image-box">
+            <div class="content-slider">
+                <div class="slide"><img src="image/inbox-slider.png" alt=""></div>
+                <div class="slide"><img src="image/board-slider.png" alt=""></div>
+                <div class="slide"><img src="image/planner-slider.png" alt=""></div>
+            </div>
+        </div>
+
+    </section>
+    <script>
+        // Place this in a <script> tag after your slider HTML
+        function showSlide(index) {
+            // Get slide width dynamically for responsiveness
+            const slide = document.querySelector('.slide');
+            const slideWidth = slide.offsetWidth;
+            document.querySelector('.content-slider').style.transform =
+                `translateX(-${index * slideWidth}px)`;
+        }
+    </script>
+
+    <section class="section-4">
+        <div class="container-4">
+            <h2>From message to action</h2>
+            <p>Quickly turn communication from your favorite apps into to-dos,
+                keeping all your discussions and tasks organized in one place.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section-5">
+        <div class="container-5">
+            <div class="image-content">
+                <div class="email-todos"><img src="image/email-todos.png" alt=""></div>
+                <div class="mail-todos">
+                    <h2>EMAIL MAGIC</h2>
+                    <p>Easily turn your emails into to-dos! Just forward them to your Trello Inbox,
+                        and they’ll be transformed by Atlassian Intelligence (AI)
+                        into organized to-dos with all the links you need.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="image-content-2">
+                <div class="mail-todo-2">
+                    <h2>MESSAGE APP SORCERY</h2>
+                    <p>Need to follow up on a message from Slack or Microsoft Teams? Send it directly to your Trello
+                        board!
+                        Your favorite app interface lets you save messages
+                        that appear in your Trello Inbox with AI-generated summaries and links.
+                    </p>
+                </div>
+                <div class="slackteams"><img src="image/slackteams-to-inbox.png" alt=""></div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="section-6">
+        <div class="content-6">
+            <h6>WORK SMARTER</h6>
+            <h2>Do more with Trello</h2>
+            <p>Customize the way you organize with easy integrations, automation,
+                and mirroring of your to-dos across multiple locations.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-7">
+        <div class="container-7">
+            <div class="integration">
+                <img src="image/Integration.png" alt="integration">
+                <h2>Integrations</h2>
+                <p>
+                    Connect the apps you are already using into your
+                    Trello workflow or add a Power-Up to fine-tune your specific needs.
+                </p>
+                <a href="#">Browse Integrations</a>
+            </div>
+
+            <div class="integration-1">
+                <img src="image/Automation.png" alt="Automation">
+                <h2>Automation</h2>
+                <p>
+                    No-code automation is built into every Trello board. Focus on the work that matters most and let the
+                    robots do the rest.
+                </p>
+                <a href="#">Browse Integrations</a>
+            </div>
+
+            <div class="integration-2">
+                <img src="image/Card mirror.png" alt="Card Mirror">
+                <h2>Card mirroring</h2>
+                <p>
+                    View all your to-dos from multiple boards in one place. Mirror a card to keep track of work wherever
+                    you need it!
+                </p>
+                <a href="#">Browse Integrations</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-8">
+
+        <div class="container-8">
+            <p>Join a community of millions of users globally who are using Trello to get more done.</p>
+            <img src="image/image8.JPG" alt="">
+        </div>
+
+    </section>
+
+    <section class="section-9">
+
+        <div class="container-9">
+            <h2>Get started with Trello today</h2>
+            <div class="input-row">
+                <input type="text" id="email" placeholder="Email">
+                <button>Sign up - it's free!</button>
+            </div>
+            <p>By entering my email, I acknowledge the <span>Atlassian Privacy Policy</span> </p>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="container-footer">
+            <div class="footer-logo">
+                <img src="image/logo.png" alt="">
+                <p>Log In</p>
+            </div>
+
+            <div class="ftcontainer">
+                <h2>About Trello</h2>
+                <p>What’s behind the boards.</p>
+            </div>
+
+            <div class="ftcontainer">
+                <h2>Jobs</h2>
+                <p>Learn about open roles on the Trello team.</p>
+            </div>
+
+            <div class="ftcontainer">
+                <h2>Apps</h2>
+                <p>Download the Trello App for your Desktop or Mobile devices.</p>
+            </div>
+
+            <div class="ftcontainer">
+                <h2>Contact Us</h2>
+                <p>Need anything? Get in touch and we can help.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
